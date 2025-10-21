@@ -1,9 +1,7 @@
 ---
-icon: material/numeric-4-box
-title: Cvičení 4
+icon: fontawesome/solid/globe
+title: Práce s webovými mapovými službami
 ---
-
-# Práce s webovými mapovými službami
 
 ## Cíle cvičení
 
@@ -36,12 +34,12 @@ Prostorová data (geodata) jsou data, která obsahují informaci o konkrétní g
 
     Podstatnou částí geoprostorových dat jsou atributy. Jedná se o __doplňkové informace přiřazené ke každému prvku__ a uspořádané ve formě tzv. __atributové tabulky__. Sloupce této tabulky jsou tzv. __:octicons-columns-16: atributy__, řádky jsou tzv. __:octicons-rows-16: záznamy__. Každý atribut má svůj název a datový typ (např. celé číslo, des. číslo, text, datum). V záznamu nemusí být nutně vyplněny všechny atributy (záleží na nastavení databáze).
 
-    ![](../assets/cviceni03/img02.png){width=50% .no-filter}
+    ![](../assets/geoportaly/img02.png){width=50% .no-filter}
     {align="center"}
 
     Zobrazování atributů konkrétního prvku probíhá nejčastěji formou tzv. __vyskakovacího okna__ (pop-up window). Tento prvek uživatelského rozhraní se __objeví po kliknutí na prvek v mapě__ a ve výchozím stavu zobrazuje __tabulku s atributy pro daný prvek__.  Atributy se v geomatice používají pro __filtrování prvků__ (zobrazení/skrytí) nebo __řízení symbologie__ (např. obarvení budov podle počtu podlaží).
 
-    ![](../assets/cviceni03/img03.png){width=50% .no-filter}
+    ![](../assets/geoportaly/img03.png){width=50% .no-filter}
     {align="center"}
 
     <figcaption>vyskakovací okno (po kliknutí na prvek)</figcaption>
@@ -92,7 +90,7 @@ style="border: .05rem solid #ededed; border-radius: .1rem;"-->
     </div>
 
     <figure markdown>
-    ![Rozdíl v grafické reprezentaci vektorových a rastrových dat](../assets/cviceni03/VectorVsRaster.png "Rozdíl v grafické reprezentaci vektorových a rastrových dat"){ width=400px }
+    ![Rozdíl v grafické reprezentaci vektorových a rastrových dat](../assets/geoportaly/VectorVsRaster.png "Rozdíl v grafické reprezentaci vektorových a rastrových dat"){ width=400px }
     <figcaption>Rozdíl v grafické reprezentaci vektorových a rastrových dat (Geletič et al. 2019)</figcaption>
     </figure>
 
@@ -102,7 +100,7 @@ style="border: .05rem solid #ededed; border-radius: .1rem;"-->
 
 Mapové služby jsou __webové nástroje poskytující geoprostorová data__ ze serveru na klienta __prostřednictvím internetu__. Klientem je (zjednodušeně) zařízení uživatele (např. webový prohlížeč) vysílající požadavek pro získání dat ze serveru. V praxi se většinou __klient služby dotazuje pomocí GIS aplikace__ (webové či desktopové), která na pozadí posílá serveru požadavky a následně zobrazuje přijatá data (viz obrázek). Díky vazbě dat na souřadnicový systém lze takto __kombinovat data s různými rozsahy a z různých zdrojů v jednom mapovém okně__ a data se zobrazí polohově správně.
 
-![](../assets/cviceni03/img01.svg){ .no-filter width=700px}
+![](../assets/geoportaly/img01.svg){ .no-filter width=700px}
 {align=center}
 
 Pro mapové služby existují různé __standardy komunikace__:
@@ -274,61 +272,18 @@ a __příslušné datové vrstvy__. Vrstvy prolněte __pomocí nástrojů průhl
 
 </div>
 
-1.  ![](../assets/cviceni03/map_01.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
-2.  ![](../assets/cviceni03/map_02.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
-3.  ![](../assets/cviceni03/CLC_legenda.png){ .no-filter width=900px} legenda k datům Corine Land Cover
-4.  ![](../assets/cviceni03/GeoprohlizecCUZK_coord.png){ .no-filter width=600px} zadání souřadnic bodu v Geoprohlížeči ČÚZK
-5.  ![](../assets/cviceni03/filter.png){ .no-filter width=700px} funkce pro filtrování dat 
-6.  ![](../assets/cviceni03/filtr_posty.png){ .no-filter width=700px} nastavení filtru
-7.  ![](../assets/cviceni03/AGOL_ZTM.png){ .no-filter width=700px} nastavení ZTM jako podkladové mapy
-8.  ![](../assets/cviceni03/AGOL_ZTM.png){ .no-filter width=700px} nastavení ZTM jako podkladové mapy
-9.  ![](../assets/cviceni03/AGOL_pruhlednost.png){ .no-filter width=700px} nastavení průhlednosti vrstvy
-10. ![](../assets/cviceni03/AGOL_print.png){ .no-filter width=700px} nastavení měřítka při exportu mapy
-11. ![](../assets/cviceni03/CLC1990_REST.png){ .no-filter width=700px} výběr mapové služby REST
-12. ![](../assets/cviceni03/CLC_popup.png){ .no-filter width=700px} aktivace vyskakovacích oken
-13. ![](../assets/cviceni03/GEO_popup.png){ .no-filter width=700px} aktivace vyskakovacích oken
+1.  ![](../assets/geoportaly/map_01.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
+2.  ![](../assets/geoportaly/map_02.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
+3.  ![](../assets/geoportaly/CLC_legenda.png){ .no-filter width=900px} legenda k datům Corine Land Cover
+4.  ![](../assets/geoportaly/GeoprohlizecCUZK_coord.png){ .no-filter width=600px} zadání souřadnic bodu v Geoprohlížeči ČÚZK
+5.  ![](../assets/geoportaly/filter.png){ .no-filter width=700px} funkce pro filtrování dat 
+6.  ![](../assets/geoportaly/filtr_posty.png){ .no-filter width=700px} nastavení filtru
+7.  ![](../assets/geoportaly/AGOL_ZTM.png){ .no-filter width=700px} nastavení ZTM jako podkladové mapy
+8.  ![](../assets/geoportaly/AGOL_ZTM.png){ .no-filter width=700px} nastavení ZTM jako podkladové mapy
+9.  ![](../assets/geoportaly/AGOL_pruhlednost.png){ .no-filter width=700px} nastavení průhlednosti vrstvy
+10. ![](../assets/geoportaly/AGOL_print.png){ .no-filter width=700px} nastavení měřítka při exportu mapy
+11. ![](../assets/geoportaly/CLC1990_REST.png){ .no-filter width=700px} výběr mapové služby REST
+12. ![](../assets/geoportaly/CLC_popup.png){ .no-filter width=700px} aktivace vyskakovacích oken
+13. ![](../assets/geoportaly/GEO_popup.png){ .no-filter width=700px} aktivace vyskakovacích oken
 
 <hr class="level-1">
-
-## Výstupy cvičení
-
-Povinným výstupem úlohy je __technická zpráva v elektronické podobě__{.outlined} odevzdaná v termínu prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=363757){.color_def .underlined_dotted .external_link_icon target="_blank"}.
-
-Termín pro odevzdání úlohy: __neděle 23. března, 23.59 hod__{.outlined} 
-
-??? task-fg-color "Výstup cvičení: Technická zpráva (ukázka)"
-
-    <iframe src="https://drive.google.com/file/d/1ZqcjTFb2wTY1slDzBp9NWATWiMmgRROJ/preview" width="100%" height="100%" style="border:0;"></iframe>
-    {.custom_height}
-
-<style>
-    .custom_height{height:80vw;}
-</style>
-
-Úloha je uznána, pokud technická zpráva obsahuje __všechny požadované náležitosti__ (viz níže) a má __správný formát__ (PDF).
-
-???+ note-grey "Požadované náležitosti technické zprávy"
-    - Formát odevzdání __:material-file: PDF__, název souboru __U4_Prijmeni_Jmeno.pdf__{.no-dec .outlined}, případně __U4_Prijmeni_Jmeno_oprava01.pdf__{.no-dec .outlined}
-    - Rozpiska se __jménem__, __názvem úlohy__, __individuálním číslem zadání__ a __souřadnicemi zadaného bodu__
-    - __Odpovědi__ na všechny otázky v zadání úlohy __včetně zdrojů__ – __jako zdroj nelze uvést pouze "ArcGIS Online" – tato služba je pouze prohlížečka, uvedení jako zdroj proto nedává smysl. Zdrojem získaných informací jsou konkrétní datové vrstvy – na ty lze odkazovat jejich přesným názvem a URL adresou služby.__{style="color:#c22521;" .icon-exclm .no-dec}
-    - __Grafické přílohy__ dle zadání (podúlohy __9__{.no-dec .outlined} a __10__{.no-dec .outlined} )
-    - __Závěr__ s krátkým (3 až 6 vět) objektivním hodnocením výsledků úlohy. Lze např. zhodnotit, proč jsou některé výsledky takové, jaké jsou. Nebo zmínit využití podobné úlohy ve vašem oboru.
-
-### Opravy
-
-V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=363757){.color_def .underlined_dotted .external_link_icon target="_blank"}. Výstup lze odevzdat po __maximálně jedné opravě__, v případě pozdního odevzdání či nesprávného výstupu po první opravě je úloha __trvale označena jako nesplněná__{style="color:#c22521;"}.
-
-[Tabulka hodnocení úloh](https://docs.google.com/spreadsheets/d/1oa_5s2p5B-eIXSad0H14NJTzTYX3YhDc9FUlwDHvrrc/edit?gid=0#gid=0){ .md-button .md-button--primary target="_blank"}
-{align=center}
-
-<br><br><br><br><br>
-
-
-<!--
-<style>
-    .underlined_dotted {border-bottom: .05rem dotted var(--md-default-fg-color--light);}
-    .color_def {color:var(--md-default-fg-color) !important;}
-    .no-wrap {white-space: nowrap;}
-    .bg {border-radius: .1rem;  background-color: var(--md-default-fg-color--lightest);  padding:.1em .4em; white-space: nowrap;}
-</style>
--->

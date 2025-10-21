@@ -1,1 +1,1 @@
-# cvut-sgea
+# cvut-krajina

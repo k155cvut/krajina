@@ -1,11 +1,11 @@
-site_name: Stavební geodézie A (154SGEA) – ČÁST GIS
+site_name: Adaptace krajiny na klimatickou změnu
 nav:
   - Základní informace: index.md
-  - Cvičení:
-      - Práce s webovými mapovými službami: cviceni/cviceni04.md
-      - Tvorba webové mapy: cviceni/cviceni05.md
-  # - Data: data.md
-  - Hodnocení úloh: hodnoceni.md
+  - Úlohy:
+      - Práce s webovými mapovými službami: ulohy/geoportaly.md
+      - 3D tisk území: ulohy/3D_tisk.md
+  - Podklady: podklady.md
+
 plugins:
   - search
   - glightbox:
@@ -56,13 +56,9 @@ theme:
       accent: custom
 extra:
   social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/CTUGeomatics
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/geomatics.ctu
     - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/geomatics.ctu
-copyright: <a href="https://geomatics.fsv.cvut.cz" target="_blank">Katedra geomatiky</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2025
+      link: https://www.instagram.com/krajina_cvut/
+copyright: <a href="https://krajina.fsv.cvut.cz/" target="_blank">Stavby, krajina a životní prostředí</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2025
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
