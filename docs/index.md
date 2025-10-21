@@ -18,7 +18,7 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 1914 translation by H. Rackham
 
 <figure markdown>
-![](../assets/uvodni-foto-krajina.jpg)
+![](./assets/uvodni-foto-krajina.jpg)
 </figure>
 
 
@@ -81,7 +81,7 @@ Program běží na všech běžných operačních systémech (Windows, macOS, Li
 
 
 <figure markdown>
-![](../assets/qgis-ukazka.jpg){ width="800" }
+![](./assets/qgis-ukazka.jpg){ width="800" }
     <figcaption>Uživatelské rozhraní QGIS – příklad mapového projektu s vektorovými vrstvami</figcaption>
 </figure>
 
@@ -135,16 +135,20 @@ Můžeme si díky němu vyzkoušet celý proces tvorby map — od načtení dat,
 <!-- 3 obrázky vedle sebe s mezerami, responsivní -->
 <div style="display:flex; gap:12px; align-items:flex-start; justify-content:center; flex-wrap:wrap;">
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="../assets/qgis1.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="./assets/qgis1.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="../assets/qgis2.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="./assets/qgis2.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="../assets/qgis3.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="./assets/qgis3.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
 </div>
 
+<figure markdown>
+![](./assets/Harmonogram_3-4_2025.png){ width="100%" }
+    <figcaption>Přiřazení učeben a učitelů k paralelkám</figcaption>
+</figure>
 
 
 
