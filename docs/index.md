@@ -145,10 +145,6 @@ Můžeme si díky němu vyzkoušet celý proces tvorby map — od načtení dat,
   </figure>
 </div>
 
-<figure markdown>
-![](./assets/Harmonogram_3-4_2025.png){ width="100%" }
-    <figcaption>Přiřazení učeben a učitelů k paralelkám</figcaption>
-</figure>
 
 
 
