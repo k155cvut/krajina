@@ -88,4 +88,5 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.tilde
   - sane_lists
+  - tables
 

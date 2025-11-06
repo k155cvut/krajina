@@ -7,13 +7,17 @@ title: Práce s webovými mapovými službami
 
 <div class="grid cards grid_icon_info smaller_padding" markdown> <!-- specificky format gridu (trida "grid_icon_info") na miru uvodni strance predmetu -->
 
+-   :material-presentation:{ .xl }
+
+    úvod do tématu __prostorových dat__
+
 -   :fontawesome-regular-handshake:{ .xl }
 
-    __seznámení s prostředím__ webového systému ArcGIS&nbsp;Online
+    __seznámení s prostředím__ desktopového programu <span style="text-wrap: nowrap;">QGIS :simple-qgis:{style="font-size: smaller; vertical-align: -2px;"}</span>
 
 -   :material-layers-triple-outline:{ .xl }
 
-    __shrnutí datových zdrojů__ webových mapových vrstev
+    __výčet datových zdrojů__ webových mapových vrstev
 
 -   :material-map-outline:{ .xl }
 
@@ -23,14 +27,18 @@ title: Práce s webovými mapovými službami
 
     __extrakce informací__ z více vrstev ke konkrétnímu místu
 
+-   :material-lightbulb-on-10:{ .xl }
+
+    __shrnutí a interpretace__ získaných informací
+
 </div>
 
 <hr class="level-1">
 
 ## Prostorová data
-Prostorová data (geodata) jsou data, která obsahují informaci o konkrétní geografické poloze objektů na Zemi. Poloha může být přímo (souřadnice objektu) či nepřímo (např. adresou). Informace o poloze obvykle bývá doplněna o informaci vlastnostech *(atributech)* objektu, která jsou uložena v atributové tabulce. Dva nejběžnější datové formáty používané k ukládání (geo)prostorových dat jsou vektorové (body, linie, plochy) a rastrové (satelitní snímky, digitální modely terénu).
+Prostorová data (geodata) jsou data, která obsahují __informaci o konkrétní geografické poloze objektů na Zemi__. Poloha může být určena __přímo__ (souřadnice objektu) či __nepřímo__ (např. adresou). K informaci o poloze obvykle bývají připojeny doplňkové informace ve formě tzv. __atributové tabulky__. Dva nejběžnější typy (geo)prostorových dat jsou __vektorové (body, linie, plochy)__ a __rastrové (satelitní snímky, digitální modely terénu)__.
 
-???+ note-fg-color "Atributy (geo)prostorových dat"
+???+ info-fg-color "Atributy (geo)prostorových dat"
 
     Podstatnou částí geoprostorových dat jsou atributy. Jedná se o __doplňkové informace přiřazené ke každému prvku__ a uspořádané ve formě tzv. __atributové tabulky__. Sloupce této tabulky jsou tzv. __:octicons-columns-16: atributy__, řádky jsou tzv. __:octicons-rows-16: záznamy__. Každý atribut má svůj název a datový typ (např. celé číslo, des. číslo, text, datum). V záznamu nemusí být nutně vyplněny všechny atributy (záleží na nastavení databáze).
 
@@ -46,53 +54,54 @@ Prostorová data (geodata) jsou data, která obsahují informaci o konkrétní g
 
  
 
+    <!--
     <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://experience.arcgis.com/experience/0d0ade6e797e419d8e73fd28b8704c5a"></iframe>
+    -->
 
 <!--![](https://dummyimage.com/600x350/bde0ff/0065bd&text=atributová+tabulka+ve+spojení+s+geometrií)
 style="border: .05rem solid #ededed; border-radius: .1rem;"-->
 
-???+ note-fg-color "Vektorová vs. rastrová data"
-    <div class="grid cards" markdown>
+(Geo)prostorová data lze rozdělit na __dva základní typy__:
 
-    -   :material-vector-polyline:{ .lg .middle } __Vektorová data__
+<div class="grid cards" markdown>
 
-        ---
+-   :material-vector-polyline:{ .lg .middle } __Vektorová data__
 
-        Reprezentují prvky reálného světa pomocí základních geometrických elementů: __bodů, linií a ploch__ (tzv. polygonů)
+    ---
 
-        Podrobnost dat je určena __podrobností souřadnic vrcholů__ geometrického prvku
+    Reprezentují prvky pomocí základních geometrických elementů: __:material-vector-point: bodů, :material-vector-polyline: linií a :material-vector-rectangle: ploch__ (tzv. polygonů)
 
-        Vhodné pro modelování a analýzu __diskrétních objektů__ (např. poloha bodů, kategorie pokrytí půdy)
+    Podrobnost dat je určena __podrobností souřadnic vrcholů__ geometrického prvku
 
-        Vhodné pro __tvorbu map, měření délek, geometrické výpočty__
+    Vhodné pro modelování a analýzu __diskrétních objektů__ (např. rozhledny, silniční síť, plochy krajů ČR)
 
-        Možné problémy s __topologií__ (mezery a překryvy)
+    Možné problémy s __topologií__ (mezery a překryvy)
 
-        Základními formáty vektorových dat jsou __Esri Shapefile, GeoJSON, GeoPackage__ či __KML/GML__
+    Základními formáty vektorových dat jsou __Esri Shapefile, GeoJSON, GeoPackage__ či __KML/GML__
 
 
-    -   :material-grid:{ .lg .middle } __Rastrová data__
+-   :material-grid:{ .lg .middle } __Rastrová data__
 
-        ---
+    ---
 
-        Reprezentují prvky reálného světa v podobě pravidelné mřížky tvořené tzv. __pixely__ (z angl. *picture element*)
+    Reprezentují prvky (častěji však souvislou plochu) v podobě pravidelné mřížky tvořené tzv. __pixely__
 
-        Podrobnost dat je určena __prostorovým rozlišením__ rastru, tj. __velikostí__ hrany __pixelu__ (v metrech)
+    Podrobnost dat je určena __prostorovým rozlišením__ rastru, tj. __velikostí__ hrany __pixelu__ (v metrech)
 
-        Vhodné pro modelování a analýzu __spojitých jevů__ (nadmořská výška, teplota, srážky)
-        
-        Využívané pro __obrazová data__ (např. satelitní snímky)
+    Vhodné pro modelování a analýzu __spojitých jevů__ (nadmořská výška, teplota, srážky)
+    
+    Využívané pro __obrazová data__ (např. ortofotomapy, satelitní snímky)
 
-        Nevýhodou velikost souborových dat
+    Nevýhodou je vyšší objem dat
 
-        Základními formáty rastrových dat jsou __GeoTIFF, JPEG, PNG__ či __GIF__
+    Základními formáty rastrových dat jsou __GeoTIFF, JPEG, PNG__ či __GIF__
 
-    </div>
+</div>
 
-    <figure markdown>
-    ![Rozdíl v grafické reprezentaci vektorových a rastrových dat](../assets/geoportaly/VectorVsRaster.png "Rozdíl v grafické reprezentaci vektorových a rastrových dat"){ width=400px }
-    <figcaption>Rozdíl v grafické reprezentaci vektorových a rastrových dat (Geletič et al. 2019)</figcaption>
-    </figure>
+<figure markdown>
+![Rozdíl v grafické reprezentaci vektorových a rastrových dat](../assets/geoportaly/VectorVsRaster.png "Rozdíl v grafické reprezentaci vektorových a rastrových dat"){ width=400px }
+<figcaption>Rozdíl v grafické reprezentaci vektorových a rastrových dat (Geletič et al. 2019)</figcaption>
+</figure>
 
 <hr class="level-1">
 
@@ -112,7 +121,7 @@ Pro mapové služby existují různé __standardy komunikace__:
 - proprietární standard společnosti [Esri]("ESRI (Environmental Systems Research Institute) je společnost zabývající se vývojem softwaru určeného pro práci s geografickými informačními systémy"):
     - __ArcGIS REST__
 
-???+ note-fg-color "Kde hledat mapové služby?"
+???+ info-fg-color "Kde hledat mapové služby?"
     - geoportály (např. metadatový katalog [Národního geoportálu INSPIRE](https://geoportal.gov.cz/web/guest/home/){.color_def .underlined_dotted .external_link_icon target="_blank"})
     - webové stránky poskytovale (např. [Evropská agentura pro životní prostředí (EEA)](https://land.copernicus.eu/en/products/corine-land-cover?tab=main){ .color_def .underlined_dotted .external_link_icon target="_blank"})
     
@@ -130,64 +139,100 @@ __Tipy na některé zajímavé geoportály:__
 [Geoportál města Brna](https://data.brno.cz/ "Magistrát města Brna"){ .md-button .md-button--primary .button_smaller .external_link_icon target="_blank"}
 {.button_array}
 
-## ArcGIS Online
+## QGIS a připojení mapových služeb
 
-[__ArcGIS Online__](https://www.arcgis.com/){.color_def .underlined_dotted .external_link_icon target="_blank"} je cloudová platforma pro geografické informační systémy od společnosti Esri. Umožňuje uživatelům vytvářet, sdílet a analyzovat mapy a geografická data prostřednictvím webového prohlížeče. ArcGIS Online představuje cenný nástroj pro vizualizaci a analýzu prostorových dat, jako mohou být urbanistické plány, dopravní sítě, demografické údaje nebo informace o životním prostředí. Platforma nabízí širokou škálu nástrojů pro tvorbu interaktivních map, 3D modelů a webových aplikací, které mohou být využity při plánování a prezentaci projektů. <br>Díky ArcGIS Online mohou uživatelé snadno integrovat různé zdroje dat, provádět prostorové analýzy a vytvářet vizuálně atraktivní prezentace svých návrhů. Platforma také podporuje spolupráci a sdílení dat mezi uživateli, což umožňuje studentům a pedagogům efektivněji pracovat na společných projektech. ArcGIS Online je tak vhodným nástrojem pro moderní geografické vzdělávání, který studentům umožňuje rozvíjet dovednosti v oblasti prostorové analýzy a vizualizace.
+[__QGIS__](https://qgis.org/){.color_def .underlined_dotted .external_link_icon target="_blank"} je bezplatný open-source software pro geografické informační systémy (GIS). Je to velmi pokročilý nástroj pro tvorbu, úpravu, analýzu a vizualizaci map a geoprostorových dat. Lze pomocí něho tvořit mapy (přidávat data a aplikovat symboliku), ale i hromadně upravovat podkladová data (tzv. analyzovat).
+
+__Mapová služba__ je webové rozhraní umožňující sdílení geoprostorových dat bez nutnosti jejich stahování ve formě souborů. Díky tomuto rozhraní je možné velmi rychle připojit vhodná data a stahovat pouze ty části (dlaždice), které ma uživatel aktuálně na obrazovce.
+
+### Přidávání mapových služeb do QGIS
+
+U přidávání mapových služeb je důležité vědět, o jaký typ (standard komunikace) se jedná. V rámci tohoto cvičení jsou použity 3 typy služeb: __WMS__{.bg}, __WFS__{.bg} a __ArcGIS REST__{.bg}.
+
+Samotné přidání služby se provede v menu _:material-button-cursor: Vrstva_{: .outlined_code} → _:material-button-cursor: Přidat vrstvu_{: .outlined_code} a dále příslušné tlačítko podle typu dané služby.
+
+![](../assets/uloha01/img_01.png)
+![](../assets/uloha01/arrow.svg){: .off-glb .process_icon}
+![](../assets/uloha01/img_02.png)
+![](../assets/uloha01/arrow.svg){: .off-glb .process_icon}
+![](../assets/uloha01/img_03.png)
+{: .process_container}
+
+Rozhraní různých typů služeb jsou si podobná – vždy je nutné nejdříve __vytvořit nové připojení__ ke službě (tlačítko  _:material-button-cursor: Nové_{: .outlined_code}), potom vložit název služby (název je zde pouze pro orientaci uživatele v případě, že služeb připojí v budoucnu více) a URL adresu. Následně se musí uživatel ke konkrétní službě _:material-button-cursor: Připojit_{: .outlined_code}, vybrat jednu (či více) z vrstev a _:material-button-cursor: Přidat_{: .outlined_code}) ji do mapy. Dále lze dialog _:material-button-cursor: Zavřít_{: .outlined_code}), nová vrstva služby bude přidána v mapě.
 
 
 <hr class="level-1">
 
 ## Zadání úlohy
 
-Je dán __bod o zeměpisných souřadnicích__ dle individuálního zadání (viz níže).
+Je zadán __bod o zeměpisných souřadnicích__ dle individuálního zadání:
 
-??? task-fg-color "Individuální zadání"
+<div class="table_no_padding table_centered" markdown>
+| číslo zadání | Zeměpisná šířka (° ' '') |   |   | Zeměpisná délka (° ' '') |   |   |
+| ------------ | ------------------------ | - | - | ------------------------ | - | - |
+|       1      |    50   |    37   |    38,590    |    14   |    45   |    34,261    |
+|       2      |    50   |    40   |    43,046    |    13   |    57   |    19,464    |
+|       3      |    50   |    52   |    34,389    |    14   |    29   |    11,485    |
+|       4      |    49   |     6   |     6,627    |    16   |    13   |    27,818    |
+|       5      |    50   |    41   |    33,743    |    15   |    34   |    30,465    |
+</div>
+
+
+<!-- ??? task-fg-color "Individuální zadání"
     - také viz [Moodle](https://moodle-vyuka.cvut.cz/mod/page/view.php?id=363759){.color_def .underlined_dotted .external_link_icon target="_blank"}<br><br>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRPIWMyUuEA30Y8UhDF8f-T56L_N9MBSQeZ5eaw8GshZeA9MeO4aFCUhp3AnsT65sS3914Sjd8elH/pubhtml?gid=0&single=true" width="100%" height="500" frameBorder="0"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRPIWMyUuEA30Y8UhDF8f-T56L_N9MBSQeZ5eaw8GshZeA9MeO4aFCUhp3AnsT65sS3914Sjd8elH/pubhtml?gid=0&single=true" width="100%" height="500" frameBorder="0"></iframe> -->
 
+---
 
-S využitím __mapové prohlížečky__ [__ArcGIS Online__](https://www.arcgis.com/){.color_def .underlined_dotted .external_link_icon target="_blank"}, __mapových služeb__ či __geoportálů__ o zadaném bodu zjistěte:
+S využitím __programu QGIS__ a __mapových služeb__ či __geoportálů__ o zadaném bodu zjistěte:
+
 <div class="annotate" markdown>
+
 1. __příslušnost k obci__ a v jakém __katastrálním území__ bod leží
 
-    - využijte vrstev __:material-layers: Obec__{.bg} a __:material-layers: KatastralniUzemi__{.bg} z [__Geoprohlížeče ČÚZK__](https://ags.cuzk.gov.cz/geoprohlizec/ "Produkty → RUIAN"){.color_def .underlined_dotted .external_link_icon target="_blank"} (prohlížecí služba databáze RÚIAN). __(4)__{title="zadání souřadnic bodu"}
-    
-    - jako odpověď uveďte přesný __název obce__{.outlined} a __název a číslo katastrálního území__{.outlined}
+    - získejte __URL adresu mapové služby__ ArcGIS REST "Mapová služba nad daty RÚIAN" z Geoportálu ČÚZK
+    - vložte do mapy vrstvy __:material-layers: Obec__{.bg} a __:material-layers: KatastralniUzemi__{.bg}
+    - jako odpověď uveďte hodnoty atributů __Název obce__{.outlined}, __Kód katastrálního území__{.outlined} a __Číslo katastrálního území__{.outlined}
           
 ---
 
 2. __geologické podloží__ pod zadaným bodem
 
-    - využijte vhodné vrstvy ze stránek [__České geologické služby__](https://cgs.gov.cz/ "Webové služby → geologie (27) → Geologická mapa 1 : 50 000 (GEOČR50)"){.color_def .underlined_dotted .external_link_icon target="_blank"}<br>
-    *(Pro zobrazení atributů je nutné nejprve povolit vyskakovací okna)*
-    __(13)__{title="aktivace vyskakovacích oken"}
-    - jako odpověď uveďte atributy __hornina__{.outlined} a __horninový typ__{.outlined}
+    - získejte __URL adresu mapové služby__ ArcGIS REST "Geologická mapa 1 : 50 000 (GEOČR50)" z webu České geologické služby (záložka "Webové služby") – pozor, URL adresa mapové služby musí obsahovat klíčové slovo "rest"
+    - vložte do mapy vrstvu __:material-layers: Horniny GeoČR50__{.bg}
+    - jako odpověď uveďte hodnoty atributů __hornina__{.outlined} a __horninový typ__{.outlined}
 
 ---
 
 3. adresu nejbližšího __adresního bodu__
 
-    - využijte vrstvy __:material-layers: AdresniMisto__{.bg} z [__Geoprohlížeče ČÚZK__](https://ags.cuzk.gov.cz/geoprohlizec/){.color_def .underlined_dotted .external_link_icon target="_blank"} (prohlížecí služba databáze RÚIAN).
-    - jako odpověď uveďte __přesnou adresu__{.outlined} (z atributu)
+    - získejte __URL adresu mapové služby__ ArcGIS REST "Mapová služba nad daty RÚIAN" z Geoportálu ČÚZK
+    - vložte do mapy vrstvu __:material-layers: AdresniMisto__{.bg}
+    - jako odpověď uveďte hodnotu atributu __Adresa__{.outlined}
 
 ---
 
-4. poštovní směrovací číslo nejbližší __pobočky České pošty__ (__pouze pobočky, ne výdejní boxy apod.__ – zde si vyzkoušíte funkci **filtrování dat** __(5)__{title="funkce Filter data"})
+4. poštovní směrovací číslo nejbližší __pobočky České pošty__ (__pouze pobočky, ne výdejní boxy apod.__ – zde si vyzkoušíte funkci **filtrování dat**)
 
-    - využijte vrstvy __:material-layers: Pobočky České pošty__{.bg} od [__České informační agentury životního prostředí__](https://gis.cenia.cz/geoserver/pobocky_ceske_posty/wfs?SERVICE=WFS&request=GETCapabilities "adresu odkazu lze přímo použít jako mapovou vrstvu"){.color_def .underlined_dotted .external_link_icon target="_blank"} (CENIA) s nastaveným tak, že atribut **`ZKR_NAZ_FUN` nabývá hodnot `Podávací`, `Samostatná pošta Partner`, `Dodejna I`, `Dodejna II` a `Samostatná dodejna`** __(6)__{title="ukázka použití filtru nad vrstvou"}
-    - jako odpověď uveďte __pětimístné poštovní směrovací číslo nejbližší pobočky__{.outlined} 
+    - získejte __URL adresu mapové služby__ WFS z [tohoto odkazu](https://gis.cenia.cz/geoserver/pobocky_ceske_posty/wfs?SERVICE=WFS&request=GETCapabilities){.color_def .underlined_dotted .external_link_icon target="_blank"} (jedná se přímo o adresu služby, ne o webovou stránku)
+    - vrstvě nastavte __filtr__ zobrazující pouze prvky, pro které atribut __`ZKR_NAZ_FUN`__ nabývá hodnot __`Podávací`, `Samostatná pošta Partner`, `Dodejna I`, `Dodejna II` a `Samostatná dodejna`__ __(4)__{title="přesný text filtru"}
+    - jako odpověď uveďte pětimístné poštovní směrovací číslo nejbližší pobočky (hodnota atributu __PSC_ADRESY__{.outlined})
+
+<!--
 
 ---
 
-5. __nadmořskou výšku lokality__
+5. ~~__nadmořskou výšku lokality__~~
 
-    - výšku odečtěte ze __tří různých mapových podkladů__{.primary_color} ~~a __výsledky porovnejte__~~
-    - doporučenými zdroji jsou např. 
+    - ~~výšku odečtěte ze __tří různých mapových podkladů__{.primary_color} a __výsledky porovnejte__~~
+    - ~~doporučenými zdroji jsou např. 
     [__Základní topografické mapy ČR__](https://ags.cuzk.cz/geoprohlizec/ "obsahují vrstevnice s popisy výšky"){.color_def .underlined_dotted .external_link_icon target="_blank"}, webová aplikace 
     [__Analýzy výškopisu__](https://ags.cuzk.cz/av/ "režim Výpis souřadnic bodu (výškový systém Bpv (m))"){.color_def .underlined_dotted .external_link_icon target="_blank"} 
     (ČÚZK) nebo mapový portál 
-    [__Mapy.cz__](https://mapy.cz/ "funkce Měření → Výškový profil"){.color_def .underlined_dotted .external_link_icon target="_blank"}
-    - jako odpověď uveďte __3 hodnoty nadmořské výšky včetně zdroje každé z nich__{.outlined}
+    [__Mapy.cz__](https://mapy.cz/ "funkce Měření → Výškový profil"){.color_def .underlined_dotted .external_link_icon target="_blank"}~~
+    - ~~jako odpověď uveďte __3 hodnoty nadmořské výšky včetně zdroje každé z nich__{.outlined}~~
+
+-->
 
 ---
 
@@ -195,7 +240,7 @@ S využitím __mapové prohlížečky__ [__ArcGIS Online__](https://www.arcgis.c
 
     - využijte data evropského programu [__Copernicus__](https://www.copernicus.eu/cs "program EU pro družicové pozorování Země v zájmu obecného užitku všech občanů"){.color_def .underlined_dotted .external_link_icon target="_blank"} – __:material-layers: Corine Land Cover Europe__{.bg .color_def target="_blank"}
     - dostupné ze stránek &nbsp;[__Evropské agentury pro životní prostředí (EEA)__](https://land.copernicus.eu/en/products/corine-land-cover?tab=main){ .color_def .underlined_dotted .external_link_icon target="_blank"}&nbsp; či &nbsp;[__Copernicus Land Monitoring Service (CLMS)__](https://www.eea.europa.eu/en/datahub/datahubitem-view/a5144888-ee2a-4e5d-a7b0-2bbf21656348){ .color_def .underlined_dotted .external_link_icon target="_blank"}<br>
-    *(Ze stránek EEA či CLMS použijte mapovou službu 'REST API', resp. 'ESRI: REST', u WMS bohužel není v tomto případě možné vyčítat hodnoty atributů vrstvy. Pro zobrazení atributů je nutné nejprve povolit vyskakovací okna)*
+    *(Ze stránek EEA či CLMS použijte mapovou službu 'REST API', resp. 'ESRI: REST', u WMS bohužel není v tomto případě možné vyčítat hodnoty atributů vrstvy)*
     __(11)__{title="mapová služba REST"} __(12)__{title="aktivace vyskakovacích oken"}
     - jako odpověď uveďte __kód a slovní název kategorie Land Cover pro obě období__{.outlined} a __jejich slovní porovnání__{.outlined}
 
@@ -209,8 +254,9 @@ S využitím __mapové prohlížečky__ [__ArcGIS Online__](https://www.arcgis.c
 -->
 7. jaké hodnoty dosahovala v zadané lokalitě __intenzita světelného znečištění__ v roce 2022
 
-    - využijte vrstvy __:material-layers: Světelné znečištění v ČR za rok 2022__{.bg} od [__České informační agentury životního prostředí__](https://tiledimageservices2.arcgis.com/LlQJoYHf9cwrM7NJ/arcgis/rest/services/raster01_final3crf/ImageServer "adresu odkazu lze přímo použít jako mapovou vrstvu"){.color_def .underlined_dotted .external_link_icon target="_blank"} (CENIA). <figcaption>(vrstva byla přepublikována pro účely výuky – odkaz proto nevede přímo na server agentury CENIA)</figcaption>
-    - jako odpověď uveďte __hodnotu intenzity znečištění z rastru v rozmezí 1 až 5__{.outlined}
+    
+    - získejte __URL adresu mapové služby__ WMS __:material-layers: Světelné zněčištění__{.bg} z [tohoto odkazu](https://gis.cenia.cz/geoserver/svetelne_znecisteni/wms?service=WMS&request=GetCapabilities){.color_def .underlined_dotted .external_link_icon target="_blank"} (jedná se přímo o adresu služby, ne o webovou stránku). Poskytovatelem služby je [__Česká informační agentura životního prostředí__](https://cenia.gov.cz/){.color_def .underlined_dotted .external_link_icon target="_blank"} (CENIA)
+    - jako odpověď uveďte __hodnotu intenzity znečištění z rastru__{.outlined}
 
     <!--  Puvodni vrstva ZDE: https://gis.cenia.cz/geoserver/svetelne_znecisteni/wms?service=WMS&request=GetCapabilities  -->
 
@@ -218,12 +264,16 @@ S využitím __mapové prohlížečky__ [__ArcGIS Online__](https://www.arcgis.c
 
 8. příslušnost zadané lokality ke __stavebnímu a matričnímu úřadu__
 
-    - využijte vrstvy __:material-layers: Působnost úřadů__{.bg} od [__České informační agentury životního prostředí__](https://gis.cenia.cz/geoserver/pusobnost_uradu/wfs?SERVICE=WFS&request=GETCapabilities "adresu odkazu lze přímo použít jako mapovou vrstvu"){.color_def .underlined_dotted .external_link_icon target="_blank"} (CENIA).
+    - získejte __URL adresu mapové služby__ WFS __:material-layers: Působnost úřadů__{.bg} z [tohoto odkazu](https://gis.cenia.cz/geoserver/pusobnost_uradu/wfs?SERVICE=WFS&request=GETCapabilities){.color_def .underlined_dotted .external_link_icon target="_blank"} (jedná se přímo o adresu služby, ne o webovou stránku). Poskytovatelem služby je [__Česká informační agentura životního prostředí__](https://cenia.gov.cz/){.color_def .underlined_dotted .external_link_icon target="_blank"} (CENIA)
     - jako odpověď uveďte __název příslušného úřadu (pro oba typy instituce)__{.outlined}
 
+&nbsp;
+
+&nbsp;
+<!--
 ---
 
-<!--
+
 DALŠÍ TIPY (nalezeno na Cenii):
 
 Světelné znečištění: https://gis.cenia.cz/geoserver/svetelne_znecisteni/wms?service=WMS&request=GetCapabilities
@@ -242,11 +292,12 @@ zde zajimava informace o WMS: https://community.esri.com/t5/arcgis-api-for-silve
 
 -->
 
+<!--
 &nbsp;
 
 __Dále vytvořte a vyexportujte mapové kompozice:__
 
-<!-- div je zde kvuli anotacim -->
+
 
 9. využití území dle __:material-layers: CORINE Land Cover 2018__{.bg} __(3)__{title="legenda Corine Land Cover"} nad __:material-layers: Základní topografickou mapou__{.bg}, __měřítko volte 1 : 10 000__ __(10)__{title="nastavení měřítka při exportu mapy"}, __formát A4 landscape__ __(1)__{title="ukázka řešení"}
 
@@ -255,7 +306,7 @@ __Dále vytvořte a vyexportujte mapové kompozice:__
 
 ---
 
-10. nejbližšího __maloplošného chráněného území__{.underlined_dotted title="přír. památka, přír. rezervace, nár. přír. památka, nár. přír. rezervace"} přírody (nikoli okolí Vašeho bodu, ale okolí chráněného území) <!--__s popiskem__{.primary_color}--> nad __:material-layers: Základní topografickou mapou__{.bg}, __měřítko kompozice a orientaci papíru A4 volte tak, aby se dané chráněné území optimálně vešlo__ __(2)__{title="ukázka řešení"}
+10. nejbližšího __maloplošného chráněného území__{.underlined_dotted title="přír. památka, přír. rezervace, nár. přír. památka, nár. přír. rezervace"} přírody (nikoli okolí Vašeho bodu, ale okolí chráněného území) __s popiskem__{.primary_color} nad __:material-layers: Základní topografickou mapou__{.bg}, __měřítko kompozice a orientaci papíru A4 volte tak, aby se dané chráněné území optimálně vešlo__ __(2)__{title="ukázka řešení"}
 
     - využijte vrstvu z [__Geoportálu Agentury ochrany přírody a krajiny ČR__](https://gis-aopkcr.opendata.arcgis.com/){.color_def .underlined_dotted .external_link_icon target="_blank"} (AOPK), vrstvu lze vyhledat také v prostředí [__ArcGIS Online__](https://www.arcgis.com/ "služba 'Maloplošná zvláště chráněná území' od uživatele 'aopkcr'"){.color_def .underlined_dotted .external_link_icon target="_blank"}
     - výchozí podkladová mapa ArcGIS Online __není součástí správného výsledku__{.primary_color}. Pro správný výsledek je nutné podkladovou mapu změnit na oficiální [__Základní topografickou mapu od Zeměměřického úřadu v souřadnicovém systému S-JTSK__]("v prostředi AGOL odpovídá službě 'Základní topografické mapy ČR (S-JTSK)' od uživatele 'Zeměměřický Úřad'"){.color_def .underlined_dotted} __(8)__{title="přidejte ZTM jako podkladovou mapu"}.
@@ -275,7 +326,7 @@ a __příslušné datové vrstvy__. Vrstvy prolněte __pomocí nástrojů průhl
 1.  ![](../assets/geoportaly/map_01.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
 2.  ![](../assets/geoportaly/map_02.png){ .no-filter width=700px} vytvořeno nástrojem Print v ArcGIS Online
 3.  ![](../assets/geoportaly/CLC_legenda.png){ .no-filter width=900px} legenda k datům Corine Land Cover
-4.  ![](../assets/geoportaly/GeoprohlizecCUZK_coord.png){ .no-filter width=600px} zadání souřadnic bodu v Geoprohlížeči ČÚZK
+4.  `"ZKRNAZ_FUN" IN ('Podávací','Samostatná pošta Partner','Dodejna I','Dodejna II','Samostatná dodejna')`
 5.  ![](../assets/geoportaly/filter.png){ .no-filter width=700px} funkce pro filtrování dat 
 6.  ![](../assets/geoportaly/filtr_posty.png){ .no-filter width=700px} nastavení filtru
 7.  ![](../assets/geoportaly/AGOL_ZTM.png){ .no-filter width=700px} nastavení ZTM jako podkladové mapy
@@ -287,3 +338,11 @@ a __příslušné datové vrstvy__. Vrstvy prolněte __pomocí nástrojů průhl
 13. ![](../assets/geoportaly/GEO_popup.png){ .no-filter width=700px} aktivace vyskakovacích oken
 
 <hr class="level-1">
+
+-->
+
+<!--
+<hr class="level-1">
+
+## Správné řešení
+-->

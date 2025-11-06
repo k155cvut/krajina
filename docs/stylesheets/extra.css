@@ -238,8 +238,28 @@ div.table_centered .md-typeset__scrollwrap {text-align: center;}
 
 
 
+:root {
+    --md-admonition-icon--info-fg-color: var(--md-admonition-icon--info)
+  }
+  .md-typeset .admonition.info-fg-color,
+  .md-typeset details.info-fg-color {
+    border-color: var(--md-primary-fg-color);
+  }
+  .md-typeset .info-fg-color > .admonition-title,
+  .md-typeset .info-fg-color > summary {
+    background-color: color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent); /* same color but transparent */
+  }
+  .md-typeset .info-fg-color > .admonition-title::before,
+  .md-typeset .info-fg-color > summary::before {
+    background-color: var(--md-primary-fg-color);
+    -webkit-mask-image: var(--md-admonition-icon--info-fg-color);
+            mask-image: var(--md-admonition-icon--info-fg-color);
+  }
 
-  :root {
+
+
+
+:root {
     --md-admonition-icon--task-fg-color: var(--md-admonition-icon--danger)
   }
   .md-typeset .admonition.task-fg-color,
@@ -258,7 +278,8 @@ div.table_centered .md-typeset__scrollwrap {text-align: center;}
   }
 
 
-  :root {
+
+:root {
     --md-accent-fg-color: #3d673c;/*#336594;/*#264c6f;*/
     --md-primary-fg-color:#3d673c;/*#002d56;*/
   }
