@@ -2,7 +2,9 @@ site_name: Adaptace krajiny na klimatickou změnu
 nav:
   - Základní informace: index.md
   - Úlohy:
-      - Práce s webovými mapovými službami: ulohy/geoportaly.md
+      - Úvod do tématu prostorových dat: ulohy/01.md
+      - Webové mapové služby v prohlížeči: ulohy/02.md
+      - Práce s webovými mapovými službami v QGIS: ulohy/geoportaly.md
       - 3D tisk území: ulohy/3D_tisk.md
   - Podklady: podklady.md
 
