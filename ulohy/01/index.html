@@ -1,0 +1,955 @@
+<!DOCTYPE html><html lang="cs" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Úvod do tématu prostorových dat - Adaptace krajiny na klimatickou změnu</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cile-cviceni" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../.." title="Adaptace krajiny na klimatickou změnu" class="md-header__button md-logo" aria-label="Adaptace krajiny na klimatickou změnu" data-md-component="logo">
+      
+  <img src="../../assets/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adaptace krajiny na klimatickou změnu
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Úvod do tématu prostorových dat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Karty" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Základní informace
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Úlohy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../podklady/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Podklady
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adaptace krajiny na klimatickou změnu" class="md-nav__button md-logo" aria-label="Adaptace krajiny na klimatickou změnu" data-md-component="logo">
+      
+  <img src="../../assets/favicon.svg" alt="logo">
+
+    </a>
+    Adaptace krajiny na klimatickou změnu
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Základní informace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Úlohy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Úlohy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Úvod do tématu prostorových dat
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Úvod do tématu prostorových dat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cile-cviceni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cíle cvičení
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geoprostorova-data-a-atributy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geoprostorová data a atributy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geoprostorová data a atributy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zakladni-typy-dat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Základní typy dat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributova-tabulka-vektorova-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributová tabulka (vektorová data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapove-sluzby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapové služby
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geoportaly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geoportály
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QGIS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0L464 218.4l34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.6-101C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8L48 218.4zM13.9 362.2 48 346.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0l-218.5-101C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Webové mapové služby v prohlížeči
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16V4H3v12zm0-14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7v2h2v2H8v-2h2v-2H3a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2zM5 6h9v5H5zm10 0h4v2h-4zm4 3v5h-4V9zM5 12h4v2H5zm5 0h4v2h-4z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Práce s webovými mapovými službami v QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D_tisk/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2h10v6h2v5h-2.5L13 17h-2l-3.5-4H5V8h2zm3 20H2v-2h8a1 1 0 0 0 1-1v-1h2v1a3 3 0 0 1-3 3"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    3D tisk území
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../podklady/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Podklady
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Úvod do tématu prostorových dat</h1>
+
+<div class="gallery_container">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img_04.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/img_04.jpg"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img_05.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/img_05.jpg"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img_06.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/img_06.jpg"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img_07.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/img_07.jpg"></a></p>
+</div>
+<h2 id="cile-cviceni">Cíle cvičení</h2>
+<div class="grid cards grid_icon_info smaller_padding">
+<!-- specificky format gridu (trida "grid_icon_info") na miru uvodni strance predmetu -->
+<ul>
+<li>
+<p><span class="twemoji xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 11V2H2v9m2-2V4h5v5m11-2.5C20 7.9 18.9 9 17.5 9S15 7.9 15 6.5 16.11 4 17.5 4 20 5.11 20 6.5M6.5 14 2 22h9m-3.42-2H5.42l1.08-1.92M22 6.5C22 4 20 2 17.5 2S13 4 13 6.5s2 4.5 4.5 4.5S22 9 22 6.5M19 17v-3h-2v3h-3v2h3v3h2v-3h3v-2Z"></path></svg></span></p>
+<p>jaké existují <strong>základní typy</strong> geoprostorových dat</p>
+</li>
+<li>
+<p><span class="twemoji xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.88c.56 0 1 .44 1 1s-.44 1-1 1-1-.45-1-1 .44-1 1-1m0-3c2.73 0 5.06 1.66 6 4-.94 2.34-3.27 4-6 4s-5.06-1.66-6-4c.94-2.34 3.27-4 6-4m0 1.5a2.5 2.5 0 0 0 0 5 2.5 2.5 0 0 0 0-5M18 3H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5.42c-.16-.32-.3-.66-.42-1 .12-.34.26-.68.42-1H4v-4h6v2.97c.55-.86 1.23-1.6 2-2.21V13h1.15c1.16-.64 2.47-1 3.85-1 1.06 0 2.07.21 3 .59V5c0-1.1-.9-2-2-2m-8 8H4V7h6zm8 0h-6V7h6z"></path></svg></span></p>
+<p>co je <strong>atributová tabulka</strong> a k čemu slouží</p>
+</li>
+<li>
+<p><span class="twemoji xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 16.54 7.37-5.74L21 12.07l-9 7-9-7 1.62-1.26zM12 14 3 7l9-7 9 7zm0-11.47L6.26 7 12 11.47 17.74 7zm0 18.94 7.37-5.74L21 17l-9 7-9-7 1.62-1.26z"></path></svg></span></p>
+<p>práce s <strong>webovými mapovými službami</strong></p>
+</li>
+<li>
+<p><span class="twemoji xl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-7zM4 3h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m5 4h1V5H9zm0 8h1v-2H9zM5 5v2h2V5zm0 8v2h2v-2z"></path></svg></span></p>
+<p>jak využívat <strong>geoportály</strong></p>
+</li>
+</ul>
+</div>
+<hr class="level-1">
+
+<h2 id="geoprostorova-data-a-atributy">Geoprostorová data a atributy</h2>
+<p>Geoprostorová data (někdy také geodata) jsou data, která obsahují <strong>informaci o konkrétní geografické poloze objektů na Zemi</strong>. Poloha může být určena <strong>přímo</strong> (souřadnice objektu) či <strong>nepřímo</strong> (např. adresou). Dvěma nejběžnějšími typy geoprostorových dat jsou data <strong>vektorová (body, linie, plochy)</strong> a <strong>rastrová (satelitní snímky, digitální modely terénu)</strong>. V případě dat vektorových bývají k samotné poloze obvykle připojeny doplňkové informace ve formě tzv. <strong>atributové tabulky</strong>.</p>
+<h3 id="zakladni-typy-dat">Základní typy dat</h3>
+<style>
+    .grid.cards.colors li{background-color:var(--md-default-fg-color--lightest);}
+</style>
+
+<div class="grid cards colors">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3v6h2.95l2 6H6v6h6v-4.59L17.41 11H22V5h-6v4.57L10.59 15H9.06l-2-6H8V3M4 5h2v2H4m14 0h2v2h-2M8 17h2v2H8Z"></path></svg></span> <strong>Vektorová data</strong></p>
+<hr>
+<p>Reprezentují prvky pomocí základních geometrických elementů: <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 9v6h6V9zm2 2h2v2h-2z"></path></svg></span> bodů, <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3v6h2.95l2 6H6v6h6v-4.59L17.41 11H22V5h-6v4.57L10.59 15H9.06l-2-6H8V3M4 5h2v2H4m14 0h2v2h-2M8 17h2v2H8Z"></path></svg></span> linií a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h6v2h8V4h6v6h-2v4h2v6h-6v-2H8v2H2v-6h2v-4H2zm14 6V8H8v2H6v4h2v2h8v-2h2v-4zM4 6v2h2V6zm14 0v2h2V6zM4 16v2h2v-2zm14 0v2h2v-2z"></path></svg></span> ploch</strong> (tzv. polygonů)</p>
+<p>Podrobnost dat je určena <strong>podrobností souřadnic vrcholů</strong> geometrického prvku</p>
+<p>Vhodné pro modelování a analýzu <strong>diskrétních objektů</strong> (např. rozhledny, silniční síť, plochy krajů ČR)</p>
+<p>Možné problémy s <strong>topologií</strong> (mezery a překryvy polygonů, špatně napojené lomové body)</p>
+<p>Základními formáty vektorových dat jsou <strong>Esri Shapefile, GeoJSON, GeoPackage</strong> či <strong>KML/GML</strong></p>
+<hr>
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/vektor_01.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/vektor_01.png" title="Vektorová data – bodová" width="200px"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/vektor_02.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/vektor_02.png" title="Vektorová data – liniová" width="200px"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/vektor_03.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/vektor_03.png" title="Vektorová data – plošná" width="200px"></a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4v4h4V4zm6 0v4h4V4zm0 6v4h4v-4zm0 6v4h4v-4zm-2 4v-4h-4v4zm-6 0v-4H4v4zm0-6v-4H4v4zm0-6V4H4v4zm2 6h4v-4h-4zM4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4c-1.08 0-2-.9-2-2V4a2 2 0 0 1 2-2"></path></svg></span> <strong>Rastrová data</strong></p>
+<hr>
+<p>Reprezentují prvky (častěji však souvislou plochu) v podobě pravidelné mřížky tvořené tzv. <strong>pixely</strong></p>
+<p>Podrobnost dat je určena <strong>prostorovým rozlišením</strong> rastru, tj. <strong>velikostí</strong> hrany <strong>pixelu</strong> (v metrech)</p>
+<p>Vhodné pro modelování a analýzu <strong>spojitých jevů</strong> (nadmořská výška, teplota, srážky)</p>
+<p>Využívané pro <strong>obrazová data</strong> (např. ortofotomapy, satelitní snímky)</p>
+<p>Základními formáty rastrových dat jsou <strong>GeoTIFF, JPEG, PNG</strong> či <strong>GIF</strong></p>
+<hr>
+<p align="center"><!-- <img alt="" src="../assets/uloha01/rastr_01.png" title="Rastrová data" />{ width=200px .no-filter }
+<img alt="" src="../assets/uloha01/rastr_02.png" title="Rastrová data" />{ width=200px .no-filter }
+<img alt="" src="../assets/uloha01/rastr_03.png" title="Rastrová data" />{ width=200px .no-filter } -->
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/rastr_04.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/rastr_04.jpg" title="Rastrová data – ortofotomapa" width="200px"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/rastr_05.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/rastr_05.jpg" title="Rastrová data – digitální model reliéfu" width="200px"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/rastr_06.jpg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/rastr_06.jpg" title="Rastrová data – topografická mapa" width="200px"></a></p>
+</li>
+</ul>
+</div>
+<!-- <figure markdown>
+![Rozdíl v grafické reprezentaci vektorových a rastrových dat](../assets/geoportaly/VectorVsRaster.png "Rozdíl v grafické reprezentaci vektorových a rastrových dat"){ width=400px }
+<figcaption>Rozdíl v grafické reprezentaci vektorových a rastrových dat (Geletič et al. 2019)</figcaption>
+</figure> -->
+
+<hr>
+<h3 id="atributova-tabulka-vektorova-data">Atributová tabulka (vektorová data)</h3>
+<!-- ???+ info-fg-color "Atributy (geo)prostorových dat" -->
+
+<p>Podstatnou částí vektorových geoprostorových dat jsou atributy. Jedná se o <strong>doplňkové informace přiřazené ke každému prvku</strong> a uspořádané ve formě tzv. <strong>atributové tabulky</strong>. Sloupce této tabulky jsou tzv. <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.75 0h2.5C6.216 0 7 .784 7 1.75v12.5A1.75 1.75 0 0 1 5.25 16h-2.5A1.75 1.75 0 0 1 1 14.25V1.75C1 .784 1.784 0 2.75 0m8 0h2.5C14.216 0 15 .784 15 1.75v12.5A1.75 1.75 0 0 1 13.25 16h-2.5A1.75 1.75 0 0 1 9 14.25V1.75C9 .784 9.784 0 10.75 0M2.5 1.75v12.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25m8 0v12.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25"></path></svg></span> atributy</strong>, řádky jsou tzv. <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 10.75v2.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-2.5C0 9.784.784 9 1.75 9h12.5c.966 0 1.75.784 1.75 1.75m0-8v2.5A1.75 1.75 0 0 1 14.25 7H1.75A1.75 1.75 0 0 1 0 5.25v-2.5C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75m-1.75-.25H1.75a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25m0 8H1.75a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25"></path></svg></span> záznamy</strong>. Každý atribut má svůj <strong>název</strong> a <strong>datový typ</strong> (např. celé číslo, des. číslo, text, datum). V záznamu nemusí být nutně vyplněny všechny atributy (záleží na nastavení databáze).</p>
+<div class="centered_tab_labels">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">CELÁ MAPA</label><label for="__tabbed_1_2">Body</label><label for="__tabbed_1_3">Linie</label><label for="__tabbed_1_4">Polygony</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/tab-01.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/tab-01.png" width="500"></a></p>
+<p></p><figcaption>Schematická ukázka geoprostorových dat a k nim přiřazených atributových tabulek</figcaption><p></p>
+</div>
+<div class="tabbed-block">
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/tab-02.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/tab-02.png" width="500"></a></p>
+<p></p><figcaption>Schematická ukázka geoprostorových dat a k nim přiřazených atributových tabulek</figcaption><p></p>
+</div>
+<div class="tabbed-block">
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/tab-03.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/tab-03.png" width="500"></a></p>
+<p></p><figcaption>Schematická ukázka geoprostorových dat a k nim přiřazených atributových tabulek</figcaption><p></p>
+</div>
+<div class="tabbed-block">
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/tab-04.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/uloha01/tab-04.png" width="500"></a></p>
+<p></p><figcaption>Schematická ukázka geoprostorových dat a k nim přiřazených atributových tabulek</figcaption><p></p>
+</div>
+</div>
+</div>
+</div>
+<!-- ![](../assets/geoportaly/img02.png){width=50% .no-filter}
+{align="center"} -->
+
+<p>Zobrazování atributů konkrétního prvku probíhá nejčastěji formou tzv. <strong>vyskakovacího okna</strong> (pop-up window). Tento prvek uživatelského rozhraní se <strong>objeví po kliknutí na prvek v mapě</strong> a ve výchozím stavu zobrazuje <strong>tabulku s atributy pro daný prvek</strong>.  Atributy se v geomatice používají pro <strong>filtrování prvků</strong> (zobrazení/skrytí) nebo <strong>řízení symbologie</strong> (např. obarvení budov podle počtu podlaží).</p>
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/geoportaly/img03.png" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/geoportaly/img03.png" width="50%"></a></p>
+<figcaption>vyskakovací okno (po kliknutí na prvek)</figcaption>
+
+<!--
+<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://experience.arcgis.com/experience/0d0ade6e797e419d8e73fd28b8704c5a"></iframe>
+-->
+
+<!--![](https://dummyimage.com/600x350/bde0ff/0065bd&text=atributová+tabulka+ve+spojení+s+geometrií)
+style="border: .05rem solid #ededed; border-radius: .1rem;"-->
+
+<hr class="level-1">
+
+<h2 id="mapove-sluzby">Mapové služby</h2>
+<p>Mapové služby jsou <strong>webové nástroje poskytující geoprostorová data</strong> ze serveru na klienta <strong>prostřednictvím internetu</strong>. Klientem je (zjednodušeně) zařízení uživatele (např. webový prohlížeč) vysílající požadavek pro získání dat ze serveru. V praxi se většinou <strong>klient služby dotazuje pomocí GIS aplikace</strong> (webové či desktopové), která na pozadí posílá serveru požadavky a následně zobrazuje přijatá data (viz obrázek). Díky vazbě dat na souřadnicový systém lze takto <strong>kombinovat data s různými rozsahy a z různých zdrojů v jednom mapovém okně</strong> a data se zobrazí polohově správně.</p>
+<p align="center"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/geoportaly/img01.svg" data-desc-position="bottom"><img alt="" class="no-filter" src="../../assets/geoportaly/img01.svg" width="700px"></a></p>
+<p>Pro mapové služby existují různé <strong>standardy komunikace</strong>:</p>
+<ul>
+<li>
+<p><a href="" title="Open Geospatial Consortium">OGC</a> otevřené formáty: </p>
+<ul>
+<li><strong>WMS (Web Map Service)</strong>: umožňuje sdílení geografické informace ve formě rastrových dat v prostředí Internetu</li>
+<li><strong>WFS (Web Feature Service)</strong>: umožňuje sdílení geografické informace ve formě vektorových dat v prostředí Internetu</li>
+</ul>
+</li>
+<li>
+<p>proprietární od společnosti <a href="" title="ESRI (Environmental Systems Research Institute) je společnost zabývající se vývojem softwaru určeného pro práci s geografickými informačními systémy">Esri</a>:</p>
+<ul>
+<li><strong>ArcGIS REST</strong></li>
+</ul>
+</li>
+</ul>
+<p>Pro dané služby je vhodné <strong>znát standard, ve kterém je poskytována</strong>.</p>
+<details class="info-fg-color" open="open">
+<summary>Kde hledat mapové služby?</summary>
+<ul>
+<li>geoportály (viz níže)</li>
+<li>webové stránky poskytovale (např. <a class="color_def underlined_dotted external_link_icon" href="https://land.copernicus.eu/en/products/corine-land-cover?tab=main" target="_blank">Evropská agentura pro životní prostředí (EEA)</a>)</li>
+</ul>
+</details>
+<hr class="level-1">
+
+<h2 id="geoportaly">Geoportály</h2>
+<p>Geoportály jsou webové stránky, které poskytují přístup k geografickým datům a službám. Slouží jako <strong>centrální bod pro vyhledávání, prohlížení a stahování prostorových informací</strong>, jako jsou mapy, letecké snímky, katastrální data nebo údaje o životním prostředí. Mohou představovat cenný zdroj dat pro analýzu a plánování projektů. Lze zde například využít data o reliéfu terénu, dopravní infrastruktuře nebo vlastnických vztazích k pozemkům. Geoportály často nabízejí i nástroje pro prostorovou analýzu a vizualizaci dat, což může pomoci lépe porozumět kontextu projektů.<br>
+Geoportály v širším slova smyslu představují také důležitý nástroj v územním plánování a správě měst. Umožňují veřejnosti i odborníkům přístup k aktuálním a relevantním informacím o daném území. Uživatelé mohou využít geoportály k <strong>získání podkladů pro své projekty</strong>, ale také k prezentaci svých návrhů veřejnosti. Díky geoportálům se stává územní plánování transparentnější a efektivnější, což přispívá k lepšímu rozvoji měst a regionů.</p>
+<p class="process_container"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img10.png" data-desc-position="bottom"><img alt="" src="../../assets/uloha01/img10.png"></a>
+<img alt="" class="off-glb process_icon" src="../../assets/uloha01/arrow.svg">
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img11.png" data-desc-position="bottom"><img alt="" src="../../assets/uloha01/img11.png"></a></p>
+<p><strong>Tipy na zajímavé geoportály:</strong></p>
+<p class="button_array"><a class="md-button md-button--primary button_smaller external_link_icon" href="https://geoportal.cuzk.cz/" target="_blank" title="Český úřad zeměměřický a katastrální">Geoportál ČÚZK</a>
+<a class="md-button md-button--primary button_smaller external_link_icon" href="https://gis-aopkcr.opendata.arcgis.com/" target="_blank" title="Agentura přírody a krajiny">Geoportál AOPK</a>
+<a class="md-button md-button--primary button_smaller external_link_icon" href="https://geodata.statistika.cz/portal/apps/sites/#/homepage" target="_blank" title="Český statistický úřad">Geoportál ČSÚ</a>
+<a class="md-button md-button--primary button_smaller external_link_icon" href="https://geoportalpraha.cz/" target="_blank" title="IPR Praha">Geoportál Praha</a>
+<a class="md-button md-button--primary button_smaller external_link_icon" href="https://data.brno.cz/" target="_blank" title="Magistrát města Brna">Geoportál města Brna</a></p>
+<hr class="level-1">
+
+<h2 id="qgis">QGIS <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.879 13.006v3.65l-3.004-3.048v-3.495h3.582l2.852 2.893zm10.886 7.606V24h-3.654l-5.73-5.9v-3.55h3.354zm-10.828-1.448 3.372 3.371c-1.309.442-2.557.726-4.325.726C5.136 23.26 0 18.243 0 11.565 0 4.92 5.136 0 11.984 0 18.864 0 24 4.952 24 11.565c0 2.12-.523 4.076-1.457 5.759l-3.625-3.725a8.4 8.4 0 0 0 .24-2.005c0-4.291-3.148-7.527-7.1-7.527-3.954 0-7.248 3.236-7.248 7.527s3.33 7.6 7.247 7.6c.548 0 .661.017.88-.03"></path></svg></span></h2>
+<p><a class="color_def underlined_dotted external_link_icon" href="https://qgis.org/" target="_blank"><strong>QGIS</strong></a> je bezplatný desktopový open-source software pro geografické informační systémy (GIS). Je to velmi pokročilý nástroj pro <strong>tvorbu, úpravu, analýzu a vizualizaci</strong> map a geoprostorových dat. Lze pomocí něho <strong>tvořit mapy</strong> (přidávat data a aplikovat symboliku), ale i <strong>hromadně upravovat</strong> podkladová data (tzv. analyzovat).</p>
+<p>Program lze stáhnout a nainstalovat na <strong><a class="underlined external_link_icon" href="https://qgis.org/download/">této adrese</a></strong>. Pro maximální stabilitu je doporučeno instalovat verzi "<strong>Long Term Version (LTR)</strong>".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/uloha01/img_09.png" data-desc-position="bottom"><img alt="" src="../../assets/uloha01/img_09.png"></a></p>
+<p>Úkoly v rámci tohoto webu jsou optimalizované pro postup v programu QGIS.</p>
+<hr class="level-1">
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Zpět na začátek
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://krajina.fsv.cvut.cz/" target="_blank">Stavby, krajina a životní prostředí</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/krajina_cvut/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
