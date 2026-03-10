@@ -2,10 +2,11 @@ site_name: Adaptace krajiny na klimatickou změnu
 nav:
   - Základní informace: index.md
   - Úlohy:
-      - Úvod do tématu prostorových dat: ulohy/01.md
-      - Webové mapové služby v prohlížeči: ulohy/02.md
-      - Práce s webovými mapovými službami v QGIS: ulohy/03.md
-      - 3D tisk území: ulohy/3D_tisk.md
+      - Úvod do tématu prostorových dat: ulohy/01-uvod-do-gis.md
+      - Program QGIS: ulohy/02-program-qgis.md
+      - Webové mapové služby v prohlížeči: ulohy/03-webove-sluzby-v-prohlizeci.md
+      - Práce s webovými mapovými službami v QGIS: ulohy/04-webove-sluzby-v-qgis.md
+      - 3D tisk území: ulohy/05-3D_tisk.md
   - Podklady: podklady.md
 
 plugins:
@@ -33,6 +34,7 @@ theme:
   features:
     - navigation.tabs
     # - navigation.tabs.sticky
+    - navigation.footer
     - navigation.sections
     - toc.integrate
     - navigation.top
@@ -60,7 +62,7 @@ extra:
   social:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/krajina_cvut/
-copyright: <a href="https://krajina.fsv.cvut.cz/" target="_blank">Stavby, krajina a životní prostředí</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2025
+copyright: <a href="https://krajina.fsv.cvut.cz/" target="_blank">Stavby, krajina a životní prostředí</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2026
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:

@@ -28,7 +28,7 @@ title: Úvod do tématu prostorových dat
 
     práce s __webovými mapovými službami__
 
--   :material-server-network:{ .xl }
+-   :material-monitor:{ .xl }
 
     jak využívat __geoportály__
 
