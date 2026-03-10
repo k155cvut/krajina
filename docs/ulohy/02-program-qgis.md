@@ -98,13 +98,13 @@ Můžeme si díky němu vyzkoušet celý proces tvorby map — od načtení dat,
 <!-- 3 obrázky vedle sebe s mezerami, responsivní -->
 <div style="display:flex; gap:12px; align-items:flex-start; justify-content:center; flex-wrap:wrap;">
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="krajina/assets/qgis1.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="https://k155cvut.github.io/krajina/assets/qgis1.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="krajina/assets/qgis2.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="https://k155cvut.github.io/krajina/assets/qgis2.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
   <figure style="margin:0; flex:1 1 280px; max-width:600px;">
-    <img src="krajina/assets/qgis3.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
+    <img src="https://k155cvut.github.io/krajina/assets/qgis3.jpg" style="width:100%; height:auto; display:block;" loading="lazy">
   </figure>
 </div>
 
